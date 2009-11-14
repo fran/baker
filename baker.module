@@ -1,0 +1,84 @@
+<?php
+// $Id: baker.module,v 0.9 Fri Nov 13 10:53:29 CET 2009,  fran Exp $
+
+/**
+ * Define access permisions
+ *
+ * @return void
+ * @author fran
+ **/
+function baker_perm(){
+ return array('administer baker', 'administer baker parameters for breadcrumbs');
+}
+
+/**
+ * hook_nodeapi.
+ * this function set the drupal breadcrumbs. Its call other functions
+ * to generate the crumbs that will be displayed.
+ * 
+ * @return void 
+ * @author fran
+ * @var $variables: all page's variables
+  **/
+function baker_preprocess_page(&$variables){
+    $breadcrumb =  _baker_create_breadcrumb($variables);
+    if($breadcrumb){
+      $variables['breadcrumb'] = $breadcrumb;
+    }
+}
+
+/**
+ * Gets URL and explode the path to generate the breadcrumb
+ *
+ * @return $breadcrumb
+ * @author fran
+ **/
+function _baker_create_breadcrumb($variables)
+{
+  $url = _baker_get_url();
+  $crumbs = _baker_generate_crumbs($url);
+  $breadcrumb =  '<div class="breadcrumb">'. implode(' » ', $crumbs) .'</div>';
+  return $breadcrumb;
+}
+
+/**
+ * Gets the actual url
+ *
+ * @return $url : string with the actual url
+ * @author fran 
+ **/
+function _baker_get_url()
+{
+  global $base_path;
+  if(isset($_GET['q'])){
+    $url =url($_GET['q']);
+    //remove base_path;
+    $url = str_replace($base_path, '', $url);
+
+    return $url;
+  }
+}
+
+/**
+ * Generate the links with its titles.
+ *
+ * @return $crumbs : array with the links thats will generate the finally breadcrumbs
+ * @author fran
+ **/
+function _baker_generate_crumbs($url)
+{
+  $crumbs[] = l('Home', "<front>");
+  $url_items = explode('/',$url);
+  $last_url='';
+  $path_length = count($key);
+  foreach($url_items as $key => $item ){
+    // The first item don't the slash because $base_url got it. Its avoid this cases www.pepito.com//blog
+    if($key != 0){
+      $last_url .= '/';
+    }
+    $crumbs[] = l(t($item), $base_url . $last_url . $item);
+    $last_url .=  $item;
+  }
+  return $crumbs;
+}
+
