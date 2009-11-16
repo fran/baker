@@ -1,6 +1,42 @@
 <?php
 // $Id: baker.module,v 0.9 Fri Nov 13 10:53:29 CET 2009,  fran Exp $
 
+
+
+/**
+ * hook_menu. 
+ * Define adminstration pages
+ *
+ * @return $items: array with pages
+ * @author fran
+ **/
+
+function baker_menu()
+{
+  $items = array();
+
+  $items['admin/build/baker'] = array(
+    'title' => 'Baker administration',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'baker_administration_page',
+    'access callback' => 'user_access',
+    'access arguments' => array('administer baker'),
+    'file' => 'baker.admin.inc');
+    
+  $items['admin/build/baker/add'] = array(
+    'title' => 'Baker add new title',
+    'type' => MENU_CALLBACK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('baker_admin_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer baker'),
+    'file' => 'baker.admin.inc');
+    
+  return $items;
+}
+
+
+
 /**
  * Define access permisions
  *
@@ -47,6 +83,7 @@ function _baker_create_breadcrumb($variables)
  * @return $url : string with the actual url
  * @author fran 
  **/
+ 
 function _baker_get_url()
 {
   global $base_path;
