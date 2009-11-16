@@ -1,0 +1,119 @@
+<mockup version="1.0" skin="sketch" measuredW="991" measuredH="863">
+  <controls>
+    <control controlID="128" controlTypeID="com.balsamiq.mockups::Paragraph" x="770" y="396" w="178" h="88" measuredW="200" measuredH="140" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TitleWindow" x="185" y="1" w="796" h="852" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <topheight>26</topheight>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="190" controlTypeID="com.balsamiq.mockups::BreadCrumbs" x="253" y="151" w="-1" h="-1" measuredW="123" measuredH="19" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2Cadmin%2Cbaker</text>
+        <size>10</size>
+      </controlProperties>
+    </control>
+    <control controlID="197" controlTypeID="com.balsamiq.mockups::Button" x="341" y="223" w="-1" h="-1" measuredW="65" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search</text>
+      </controlProperties>
+    </control>
+    <control controlID="198" controlTypeID="com.balsamiq.mockups::TextInput" x="240" y="224" w="93" h="-1" measuredW="82" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>same%20text..</text>
+      </controlProperties>
+    </control>
+    <control controlID="191" controlTypeID="com.balsamiq.mockups::Paragraph" x="199" y="151" w="74" h="26" measuredW="200" measuredH="140" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Est%E1s%20en%3A</text>
+        <size>10</size>
+        <bold>false</bold>
+      </controlProperties>
+    </control>
+    <control controlID="200" controlTypeID="com.balsamiq.mockups::Link" x="621" y="225" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20new%20title</text>
+        <href>prototipo.admin.addTitle.baker.bmml</href>
+      </controlProperties>
+    </control>
+    <control controlID="201" controlTypeID="com.balsamiq.mockups::Paragraph" x="242" y="453" w="472" h="86" measuredW="200" measuredH="140" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Text%20to%20explain%20how%20to%20create%20inputs%20to%20override%20the%20titles%20of%20a%20specific%20link%20in%20the%20breadcrumb.........................</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::MenuBar" x="199" y="106" w="744" h="29" measuredW="157" measuredH="29" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>xxx%2C%20xxx%2C%20xxxx</text>
+      </controlProperties>
+    </control>
+    <control controlID="189" controlTypeID="com.balsamiq.mockups::Paragraph" x="240" y="801" w="319" h="30" measuredW="200" measuredH="140" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pi%E9%2C%20Informaci%F3n%20transversal%2C%20enlaces%2C%20etc</text>
+        <color>16512</color>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Canvas" x="757" y="141" w="200" h="358" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <color>15790322</color>
+      </controlProperties>
+    </control>
+    <control controlID="192" controlTypeID="com.balsamiq.mockups::DataGrid" x="240" y="280" w="474" h="167" measuredW="451" measuredH="116" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Source%2C%20Title%2C%20Actions%0Ablogs/%2C%20Mis%20entradas%2C%20%5Bedit%5D%20%5Bdelete%5D%0Aanuncios/destacados%2C%20Lo%20+%20destacado%2C%20%5Bedit%5D%20%5Bdelete%5D%0Aactulidad/freak/placas/Asus-07_09%2C%20Asus%20%282007%20-%202009%29%2C%20%5Bedit%5D%20%5Bdelete%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::VRule" x="749" y="161" w="-1" h="611" measuredW="5" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>5865130</color>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::Canvas" x="193" y="149" w="536" h="28" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <color>15790322</color>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::Image" x="770" y="160" w="55" h="56" measuredW="141" measuredH="144" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Paragraph" x="829" y="158" w="124" h="69" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5BAdmin%5D%0AAdministrator</text>
+      </controlProperties>
+    </control>
+    <control controlID="126" controlTypeID="com.balsamiq.mockups::FieldSet" x="761" y="231" w="191" h="142" measuredW="200" measuredH="170" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acciones</text>
+      </controlProperties>
+    </control>
+    <control controlID="188" controlTypeID="com.balsamiq.mockups::HRule" x="193" y="798" w="764" h="-1" measuredW="100" measuredH="5" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>16512</color>
+      </controlProperties>
+    </control>
+    <control controlID="125" controlTypeID="com.balsamiq.mockups::Paragraph" x="765" y="252" w="178" h="88" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Image" x="195" y="32" w="762" h="65" measuredW="141" measuredH="144" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="127" controlTypeID="com.balsamiq.mockups::FieldSet" x="762" y="379" w="191" h="111" measuredW="200" measuredH="170" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mensajes%20y%20Alertas</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
