@@ -1,0 +1,67 @@
+<?php
+
+// $Id: baker.install,v 0.9 2009/11/29 20:17:36 fran Exp $
+
+/**
+ * Implementation of hook_install().
+ */
+function baler_install() {
+  // Create tables.
+  drupal_install_schema('baker');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function baker_uninstall() {
+  // Remove tables.
+  drupal_uninstall_schema('baker');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function baker_schema() {
+  $schema['baker'] = array(
+    'description' => 'baker pk',
+    'fields' => array(
+      'bid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary Key',
+      ),
+      'url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The url',
+      ),
+      'title' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Custom title for the url',
+      ),
+      'redirect' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Custom redirect',
+      ),
+      
+    ),
+    'primary key' => array('bid'),
+    'unique keys' => array(
+      'url' => array('url'),
+    ),
+    'indexes' => array(
+      'list' => array('url','title','redirect'),
+    ),
+  );
+
+  return $schema;
+}
