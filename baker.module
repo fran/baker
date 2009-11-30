@@ -31,7 +31,23 @@ function baker_menu()
     'access callback' => 'user_access',
     'access arguments' => array('administer baker'),
     'file' => 'baker.admin.inc');
-    
+
+  $items['admin/build/baker/edit/%'] = array(
+      'title' => 'Baker adit title',
+      'type' => MENU_CALLBACK,
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('baker_admin_form'),
+      'access callback' => 'user_access',
+      'access arguments' => array('administer baker'),
+      'file' => 'baker.admin.inc');
+      
+    $items['admin/build/baker/delete/%'] = array(
+        'title' => 'Baker adit title',
+        'type' => MENU_CALLBACK,
+        'page callback' => '_baker_delete_item',
+        'access callback' => 'user_access',
+        'access arguments' => array('administer baker'),
+        'file' => 'baker.admin.inc');
   return $items;
 }
 
