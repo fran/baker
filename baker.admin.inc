@@ -1,6 +1,14 @@
 <?php
 function baker_admin_form()
 { $form = array();
+
+  $form['url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Source'),
+    '#required' => True,
+    '#description' => t('Define the Url to assign the title that will be defined.')
+  );
+  
   $form['title'] = array(
     '#type' => 'textfield',
     '#title' => t('Title'),
@@ -8,13 +16,13 @@ function baker_admin_form()
     '#description' => t('Define the title of the url defined in the previous input.')
   );
   
-  $form['source'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Source'),
-    '#required' => True,
-    '#description' => t('Define the Url to assign the title that will be defined.')
-  );
   
+  $form['redirect'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Target'),
+    '#required' => False,
+    '#description' => t('Define the Url to redirect when click the breadcrumb')
+  );
   $form['buttons']['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit'),
@@ -49,7 +57,25 @@ function baker_admin_form_validate($form, &$form_state) {
 }
 */
 function baker_admin_form_submit($form, &$form_state) {
-  //$breadcrumb = (object)$form_state['values'];
+  $customItem = (object)$form_state['values'];
+  _baker_save_custom_bread($customItem);
   //aquí se guardaría la configuración definida
+  
   $form_state['redirect'] = 'admin/build/baker';
+}
+
+/**
+ * Save the user input from administration panel
+ *
+ * @return void
+ * @author fran
+ **/
+function _baker_save_custom_bread($customItem = null) 
+{ 
+  if (isset($customItem->cid)) {
+    drupal_write_record('baker', $customItem, 'bid');
+  }
+  else {
+    drupal_write_record('baker', $customItem);
+  }
 }
