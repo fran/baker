@@ -119,3 +119,13 @@ function _baker_generate_crumbs($url)
   return $crumbs;
 }
 
+/**
+ * This function generate the title of the crumb for the url.
+ * The title could be customized  througth the baker administration by the user.
+ *
+ * @return $title
+ * @author fran
+ **/
+function _baker_generate_title($last_url, $item)
+{
+}

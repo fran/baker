@@ -5,7 +5,7 @@
 /**
  * Implementation of hook_install().
  */
-function baler_install() {
+function baker_install() {
   // Create tables.
   drupal_install_schema('baker');
 }
@@ -54,13 +54,7 @@ function baker_schema() {
       ),
       
     ),
-    'primary key' => array('bid'),
-    'unique keys' => array(
-      'url' => array('url'),
-    ),
-    'indexes' => array(
-      'list' => array('url','title','redirect'),
-    ),
+    'primary key' => array('bid')
   );
 
   return $schema;
