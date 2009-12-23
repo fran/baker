@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Undocumented function
+ *
+ * @return void
+ **/
 function baker_admin_delete_form()
 {
   $form = array();
@@ -17,7 +22,11 @@ function baker_admin_delete_form()
 
 }
 
-
+/**
+ * Generate the Baker admin form
+ *
+ * @return string The form HTML code
+ **/
 function baker_admin_form()
 { 
 
@@ -67,7 +76,7 @@ function baker_admin_form()
 /**
  * Generate the HTML code for the administation page, the urls/titles table and the acctions to manage them.
  *
- * @return The view of the page
+ * @return string The view of the page
  **/
 function baker_administration_page()
 {
@@ -81,7 +90,7 @@ function baker_administration_page()
 /**
  * Generate the html code that contains the custom breadcrumbs.
  *
- * @return $output : html code with the table
+ * @return string Html code with the table
  **/
 function _baker_administration_table()
 {
@@ -108,6 +117,11 @@ function _baker_administration_table()
   return $output;
 }
 
+/**
+ * Undocumented function
+ *
+ * @return string The popups links's HTML code
+ **/
 function _baker_popups_links(){
   popups_add_popups();
   $output =  l("Add new title", 'admin/build/baker/add',
@@ -115,6 +129,7 @@ function _baker_popups_links(){
   return $output;
 
 }
+
 /**
  * Validate and prepare the user inputs to be inserted
  *
@@ -125,6 +140,15 @@ function baker_admin_form_validate($form, &$form_state)
   //TODO:
 }
 
+/**
+ * Register the user input customization
+ *
+ * @param [type] $form
+ *
+ * @param array $form_state
+ *
+ * @return void
+ **/
 function baker_admin_form_submit($form, &$form_state) {
   //register user input customization.
   $customItem = (object)$form_state['values'];
@@ -134,6 +158,9 @@ function baker_admin_form_submit($form, &$form_state) {
 
 /**
  * Save the user input from administration panel
+ *
+ * @param string $customItem
+ *   User input
  *
  * @return void
  **/
@@ -149,9 +176,11 @@ function _baker_save_custom_bread($customItem = null)
 }
 
 /**
- * undocumented function
+ * Delete item from the breadcumb
  *
- * @return void
+ * @return
+ *   A database query result resource, or FALSE if the query was not executed
+ *   correctly.
  **/
 function _baker_delete_item()
 {
@@ -166,7 +195,10 @@ function _baker_delete_item()
 /**
  * Get the bid row information  
  *
- * @return $customItem
+ * @param int $bid
+ *
+ * @return
+ *   An object with the breadcrumb's attributes or FALSE.
  **/
 function _baker_get_custom_breadcrumb($bid)
 {
