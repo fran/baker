@@ -68,7 +68,6 @@ function baker_admin_form()
  * Generate the HTML code for the administation page, the urls/titles table and the acctions to manage them.
  *
  * @return The view of the page
- * @author fran
  **/
 function baker_administration_page()
 {
@@ -83,7 +82,6 @@ function baker_administration_page()
  * Generate the html code that contains the custom breadcrumbs.
  *
  * @return $output : html code with the table
- * @author fran
  **/
 function _baker_administration_table()
 {
@@ -121,7 +119,6 @@ function _baker_popups_links(){
  * Validate and prepare the user inputs to be inserted
  *
  * @return void
- * @author fran
  **/
 function baker_admin_form_validate($form, &$form_state)
 {
@@ -139,7 +136,6 @@ function baker_admin_form_submit($form, &$form_state) {
  * Save the user input from administration panel
  *
  * @return void
- * @author fran
  **/
 function _baker_save_custom_bread($customItem = null) 
 { 
@@ -156,7 +152,6 @@ function _baker_save_custom_bread($customItem = null)
  * undocumented function
  *
  * @return void
- * @author fran
  **/
 function _baker_delete_item()
 {
@@ -172,7 +167,6 @@ function _baker_delete_item()
  * Get the bid row information  
  *
  * @return $customItem
- * @author fran
  **/
 function _baker_get_custom_breadcrumb($bid)
 {

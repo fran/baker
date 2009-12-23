@@ -8,7 +8,6 @@
  * Define adminstration pages
  *
  * @return $items: array with pages
- * @author fran
  **/
 
 function baker_menu()
@@ -57,7 +56,6 @@ function baker_menu()
  * Define access permisions
  *
  * @return void
- * @author fran
  **/
 function baker_perm(){
  return array('administer baker', 'administer baker parameters for breadcrumbs');
@@ -69,7 +67,6 @@ function baker_perm(){
  * to generate the crumbs that will be displayed.
  * 
  * @return void 
- * @author fran
  * @var $variables: all page's variables
   **/
 function baker_preprocess_page(&$variables){
@@ -83,7 +80,6 @@ function baker_preprocess_page(&$variables){
  * Gets URL and explode the path to generate the breadcrumb
  *
  * @return $breadcrumb
- * @author fran
  **/
 function _baker_create_breadcrumb($variables)
 {
@@ -100,7 +96,6 @@ function _baker_create_breadcrumb($variables)
  * Gets the actual url
  *
  * @return $url : string with the actual url
- * @author fran 
  **/
  
 function _baker_get_url()
@@ -120,7 +115,6 @@ function _baker_get_url()
  * Generate the links with its titles.
  *
  * @return $crumbs : array with the links thats will generate the finally breadcrumbs
- * @author fran
  **/
 function _baker_generate_crumbs($url)
 {
@@ -155,7 +149,6 @@ function _baker_generate_crumbs($url)
  * The title could be customized  througth the baker administration by the user.
  *
  * @return $title
- * @author fran
  **/
 function _baker_generate_title($last_url, $item)
 {
