@@ -89,6 +89,9 @@ function _baker_create_breadcrumb($variables)
 {
   $url = _baker_get_url();
   $crumbs = _baker_generate_crumbs($url);
+  
+
+
   $breadcrumb =  '<div class="breadcrumb">'. implode(' » ', $crumbs) .'</div>';
   return $breadcrumb;
 }
