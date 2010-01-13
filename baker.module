@@ -108,9 +108,8 @@ function _baker_get_url()
   global $base_path;
   if(isset($_GET['q'])){
     $url =url($_GET['q']);
-    //remove base_path;
-    $url = str_replace($base_path, '', $url);
-
+    //remove base_url;
+    $url = str_replace($base_url, '', $url);
     return $url;
   }
 }
@@ -123,17 +122,22 @@ function _baker_get_url()
  **/
 function _baker_generate_crumbs($url)
 {
-  $crumbs[] = l('Home', "<front>");
+  // Load actual base url
+  global $base_url;
+  $crumbs[] = l(t('Home'), "<front>");
   $url_items = explode('/',$url);
   $last_url='';
   $path_length = count($key);
   foreach($url_items as $key => $item ){
-    // The first item don't the slash because $base_url got it. Its avoid this cases www.pepito.com//blog
-    if($key != 0){
-      $last_url .= '/';
+    if($item == ''){
+      // The first item don't the slash because $base_url got it. Its avoid this cases www.pepito.com//blog
+      if($key != 0){
+        $last_url .= '/';
+      }
+  
+      $crumbs[] = l(t($item), $base_url . $last_url . $item);
+      $last_url .=  $item;
     }
-    $crumbs[] = l(t($item), $base_url . $last_url . $item);
-    $last_url .=  $item;
   }
   return $crumbs;
 }
@@ -147,4 +151,5 @@ function _baker_generate_crumbs($url)
  **/
 function _baker_generate_title($last_url, $item)
 {
+  //TODO: 
 }
