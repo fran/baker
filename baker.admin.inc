@@ -156,7 +156,7 @@ function _baker_save_custom_bread($customItem = null)
  * undocumented function
  *
  * @return void
- * @author /bin/bash: niutil: command not found
+ * @author fran
  **/
 function _baker_delete_item()
 {
