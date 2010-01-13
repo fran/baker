@@ -108,8 +108,10 @@ function _baker_get_url()
   global $base_path;
   if(isset($_GET['q'])){
     $url =url($_GET['q']);
-    //remove base_url;
-    $url = str_replace($base_url, '', $url);
+    //remove base_path;
+    if($base_path != '/'){
+      $url = str_replace($base_path, '', $url);
+    }
     return $url;
   }
 }
