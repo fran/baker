@@ -126,16 +126,22 @@ function _baker_generate_crumbs($url)
   global $base_url;
   $crumbs[] = l(t('Home'), "<front>");
   $url_items = explode('/',$url);
+  $last_item = count($url_items) -1;
   $last_url='';
   $path_length = count($key);
   foreach($url_items as $key => $item ){
-    if($item == ''){
+    if($item != ''){
       // The first item don't the slash because $base_url got it. Its avoid this cases www.pepito.com//blog
       if($key != 0){
         $last_url .= '/';
       }
-  
-      $crumbs[] = l(t($item), $base_url . $last_url . $item);
+      // check the last item. It must not be a link.
+      if($key == $last_item){
+        $crumb =  urldecode($item); 
+      }else{
+        $crumb = l(urldecode($item), $base_url . $last_url . $item);
+      }
+      $crumbs[] = $crumb;
       $last_url .=  $item;
     }
   }
