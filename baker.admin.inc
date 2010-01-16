@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Undocumented function
+ * Custom title delete form 
  *
  * @return void
  **/
@@ -137,7 +137,7 @@ function _baker_popups_links(){
  **/
 function baker_admin_form_validate($form, &$form_state)
 {
-  //TODO:
+  //TODO: Input forms validations. The url input must be an url
 }
 
 /**
